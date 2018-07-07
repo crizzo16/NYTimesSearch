@@ -4,8 +4,16 @@ header {
     text-align: center;
     padding: 40px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
+    font-size: 50px;
 }
+
+
+
 #search-parameters, #top-articles {
     margin: 20px 20px;
+}
+
+#footer {
+    background: navy;
+    color: white;
 }
