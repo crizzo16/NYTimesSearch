@@ -1,5 +1,14 @@
+
 // Begin creating basic click events. Register the submit button
 $("#submit").on("click", function () {
+    
+  
+    event.preventDefault();
+  
+    var search = $("#search-term").val().trim();
+    var numRecords = parseInt($("#num-records").val());
+    var startyear = "?begin_date=" + parseInt($("#start-year").val().trim() + "0101");
+    var endyear = "?end_date=" + parseInt($("#end-year").val().trim() + "1231");
     console.log("search: " + search);
   
     console.log("numRecords: " + numRecords);
@@ -7,13 +16,6 @@ $("#submit").on("click", function () {
     console.log("startyear: " + startyear);
   
     console.log("endyear: " + endyear);
-  
-    event.preventDefault();
-  
-    var search = $("#search-term").val().trim();
-    var numRecords = parseInt($("#num-records").val());
-    var startyear = "?begin_date=" + parseInt($("#start-year").val().trim() + "0101");
-    var endyear = "?end_date=" + pareseInt($("#end-year").val().trim() + "1231");
   
     var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search + startyear + endyear + "?page0&api_key=4f6dd008f7394e408b7444580edbc7c6";
   
